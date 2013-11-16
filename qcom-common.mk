@@ -35,6 +35,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.ril_class=SamsungQualcommRIL \
     ro.telephony.call_ring.multiple=0
 
+# Vendor init module
+PRODUCT_PACKAGES += \
+    libinit_msm
+
 # GalaxyS3Settings
 # TODO: Move here
 #PRODUCT_PACKAGES += \
@@ -80,7 +84,6 @@ PRODUCT_PACKAGES += \
     init.qcom.efs.sync.sh \
     init.qcom.sh \
     init.qcom.class_core.sh \
-    init.qcom.class_main.sh \
     init.qcom.syspart_fixup.sh \
     init.qcom.early_boot.sh \
     init.qcom.mdm_links.sh \
@@ -89,8 +92,7 @@ PRODUCT_PACKAGES += \
     lpm.rc \
     init.qcom.lpm_boot.sh \
     init.qcom.thermal_conf.sh \
-    init.recovery.qcom.rc \
-    init.qcom.ril.sh
+    init.recovery.qcom.rc
 
 # Charger
 PRODUCT_PACKAGES += charger charger_res_images
@@ -98,4 +100,4 @@ PRODUCT_PACKAGES += charger charger_res_images
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 # Common overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/qcom-common/overlay
+#DEVICE_PACKAGE_OVERLAYS += device/samsung/qcom-common/overlay
